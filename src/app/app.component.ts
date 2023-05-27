@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'myApp';
   email: string = "";
-  password: string = "";
+    password: string = "";
+    viewMode: string = "";
 
   submit() {
     console.log(this.email);

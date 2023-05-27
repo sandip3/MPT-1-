@@ -1,5 +1,31 @@
 <form (ngSubmit)="submit()">
-  <input type="email" placeholder="Email" [(ngModel)]="email">
-  <input type="password" placeholder="Password" [(ngModel)]="password">
-  <button type="submit">Sign in</button>
+    <input type="email" placeholder="Email" [(ngModel)]="email">
+    <br>
+    <input type="password" placeholder="Password" [(ngModel)]="password">
+    <br>
+    <button type="submit">Sign in</button>
 </form>
+
+
+
+<ul class="nav nav-pills" *ngIf="true">
+    <li [class.active]="viewMode == 'red'">
+        <a (click)="viewMode = 'red'">Red</a>
+    </li>
+    <li [class.active]="viewMode == 'blue'">
+        <a (click)="viewMode = 'blue'">Blue</a>
+    </li>
+    <li [class.active]="viewMode == 'Orange'">
+        <a (click)="viewMode = 'Orange'">Orange</a>
+    </li>
+    <li [class.active]="viewMode == 'white'">
+        <a (click)="viewMode = 'black'">Black</a>
+    </li>
+</ul>
+<div [ngSwitch]="viewMode" [ngStyle]="{ 'background-color':viewMode,color:'white'}">
+    <div *ngSwitchCase="'red'">Red View Content</div>
+    <div *ngSwitchCase="'blue'">Blue View Content</div>
+    <div *ngSwitchCase="'Orange'">Orange View Content</div>
+    <div *ngSwitchCase="'black'">Black View Content</div>
+    <div *ngSwitchDefault>Otherwise</div>
+</div>
