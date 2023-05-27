@@ -10,16 +10,16 @@
 
 <ul class="nav nav-pills" *ngIf="true">
     <li [class.active]="viewMode == 'red'">
-        <a (click)="viewMode = 'red'">Red</a>
+        <a (click)="viewMode = 'red'">For Output of Red Color Click Me</a>
     </li>
     <li [class.active]="viewMode == 'blue'">
-        <a (click)="viewMode = 'blue'">Blue</a>
+        <a (click)="viewMode = 'blue'">For Output of Blue Color Click Me</a>
     </li>
     <li [class.active]="viewMode == 'Orange'">
-        <a (click)="viewMode = 'Orange'">Orange</a>
+        <a (click)="viewMode = 'Orange'">For Output of Orange Color Click Me</a>
     </li>
     <li [class.active]="viewMode == 'white'">
-        <a (click)="viewMode = 'black'">Black</a>
+        <a (click)="viewMode = 'black'">For Output of Black Color Click Me</a>
     </li>
 </ul>
 <div [ngSwitch]="viewMode" [ngStyle]="{ 'background-color':viewMode,color:'white'}">
